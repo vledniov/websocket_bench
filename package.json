@@ -1,0 +1,14 @@
+{
+    "name": "benchmark_websockets",
+    "description": "Websocket implementation benchmark",
+    "version": "0.0.1",
+    "dependencies": {
+        "ws":   "8.13.0"
+    },
+    "private":true,
+    "type": "module",
+    "scripts": {
+        "build_server": "node ws_server.js",
+        "build_client": "node ws_client.js"
+    }
+}

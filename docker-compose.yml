@@ -1,0 +1,19 @@
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - "9090:9090"
+    command: npm run build_server
+    ulimits:
+      nofile:
+        soft: "65536"
+        hard: "65536"
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: npm run build_client
+    depends_on:
+      - server
