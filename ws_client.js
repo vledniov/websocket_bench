@@ -8,12 +8,12 @@ for (let i=0; i<Infinity; i++) {
 }
 
 async function initiateClient() {
-    const client = new WebSocket("ws://server:9090");
+    const client = new WebSocket("ws://server:3000/cable");
 
     client.on("error", console.error)
 
     client.on("open", () => {
-        client.send("I have connected !")
+        client.send(JSON.stringify({command: "subscribe", identifier: JSON.stringify({channel: "RoomChannel"})}))
     })
 
     client.on("message", data => {
