@@ -1,14 +1,12 @@
 {
-    "name": "benchmark_websockets",
-    "description": "Websocket implementation benchmark",
-    "version": "0.0.1",
-    "dependencies": {
-        "ws":   "8.13.0"
-    },
-    "private":true,
-    "type": "module",
-    "scripts": {
-        "build_server": "node ws_server.js",
-        "build_client": "node ws_client.js"
-    }
+  "name": "poc-sockets",
+  "private": true,
+  "dependencies": {
+    "ws": "8.13.0",
+    "@rails/ujs": "^6.0.0",
+    "turbolinks": "^5.2.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/actioncable": "^6.0.0"
+  },
+  "version": "0.1.0"
 }
